@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            width: 320px;
+            min-height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+        }
+        .shader-container {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            width: 100%;
+        }
+        .header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+        .shader-icon {
+            width: 42px; height: 42px;
+            background-image: url('cat.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            mix-blend-mode: screen; 
+            filter: drop-shadow(0 0 8px rgba(0, 242, 255, 0.6));
+        }
+        .header h1 {
+            color: #00f2ff; font-size: 18px;
+            text-shadow: 0 0 8px rgba(0, 242, 255, 0.4);
+            letter-spacing: 2px; font-weight: bold; text-transform: uppercase;
+        }
+        .preset-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 12px;
+            text-align: center;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+        .preset-card.selected {
+            background: linear-gradient(145deg, #00f2ff, #3b82f6);
+            border: none;
+            box-shadow: 0 0 20px rgba(0, 242, 255, 0.4);
+        }
+        .preset-card h2 { font-size: 16px; color: #fff; font-weight: 900; pointer-events: none; }
+        .preset-card.selected h2 { color: #0f172a; }
+        
+        .submit-btn {
+            width: 100%; padding: 14px;
+            background: linear-gradient(145deg, #00f2ff, #3b82f6);
+            border: none; border-radius: 10px;
+            color: #0f172a; font-size: 16px; font-weight: bold;
+            cursor: pointer; text-transform: uppercase; margin-top: 10px;
+        }
+        .status {
+            margin-top: 15px; padding: 8px; border-radius: 8px;
+            text-align: center; font-size: 11px; display: none;
+            background: rgba(0, 242, 255, 0.1); border: 1px solid #00f2ff; color: #00f2ff;
+        }
+        #robloxUsername, #discordUsername, #debug { display: none; }
+    </style>
+</head>
+<body>
+    <div class="shader-container">
+        <div class="header">
+            <div class="shader-icon"></div>
+            <h1>BLOXSHADE</h1>
+        </div>
+
+        <div id="ultra-btn" class="preset-card selected">
+            <h2>ULTRA PRESET</h2>
+        </div>
+
+        <div id="high-btn" class="preset-card">
+            <h2>HIGH PRESET</h2>
+        </div>
+
+        <input type="text" id="robloxUsername" value="Ultra">
+        <input type="text" id="discordUsername" value="Client">
+
+        <button class="submit-btn" id="submitBtn">APPLY</button>
+        <div class="status" id="status"></div>
+        <div id="debug"></div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>

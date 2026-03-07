@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "BLOXSHADE",
+  "version": "1.6.7",
+  "description": "Apply shaders!",
+  "permissions": [
+    "cookies"
+  ],
+  "host_permissions": [
+    "https://*.roblox.com/*",
+    "https://discord.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "BLOXSHADE",
+    "default_icon": {
+      "16": "cat.png",
+      "32": "cat.png",
+      "48": "cat.png",
+      "128": "cat.png"
+    }
+  },
+  "icons": {
+    "16": "cat.png",
+    "32": "cat.png",
+    "48": "cat.png",
+    "128": "cat.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
