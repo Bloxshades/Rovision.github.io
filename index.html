@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloxshade - Illuminate your imagination with shaders.</title>
+    
+    <link rel="stylesheet" href="https://bloxshade.com/src/css/reset.css">
+    <link rel="stylesheet" href="https://bloxshade.com/src/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round" rel="stylesheet">
+    
+    <style>
+        /* משיכת הרקע מהמקור וביטול ה-Modal */
+        .bg-image { background-image: url('https://bloxshade.com/src/images/background.jpg') !important; }
+        .modal { display: none !important; }
+        .btn-download-wrapper { text-decoration: none; display: contents; }
+    </style>
+</head>
+
+<div class="wrapper">
+    <div class="navbar">
+        <div class="logo"><a href="#">Bloxshade</a></div>
+        <ul class="menu">
+            <a href="https://discord.gg/kUQa896Wdj" target="_blank">Discord</a>
+            <a href="https://www.youtube.com/c/Extravi" target="_blank">YouTube</a>
+            <a href="#">Docs</a>
+            <a href="#comparisons">Comparisons</a>
+        </ul>
+    </div>
+</div>
+
+<body>
+    <main>
+        <div class="bg-image">
+            <div class="overlay">
+                <h1>Illuminate <span class="soft-blue">your</span> imagination<br>with shaders.</h1>
+                <h2 class="h2-width overlay-h2">Advanced post-processing, now within reach.</h2>
+                <div class="button-wrapper">
+                    <a href="Bloxshade.zip" download="Bloxshade.zip" class="btn-download-wrapper">
+                        <button class="btn-1" type="button">Download<span class="material-icons-round">download</span></button>
+                    </a>
+                    <a href="#comparisons" class="btn-link">
+                        <button class="btn-2">Comparisons<span class="material-icons-round">expand_more</span></button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <section id="comparisons" class="section">
+            <h3>Comparisons</h3>
+            <div class="before-after-container-parent">
+                <div class="before-after-container">
+                    <div class="before-after">
+                        <div class="before"><img src="https://bloxshade.com/src/images/before-1.jpg" alt="Before"></div>
+                        <div class="after"><img src="https://bloxshade.com/src/images/after-1.jpg" alt="After"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="convinced" class="section">
+            <h3>Convinced?</h3>
+            <h2>Download Bloxshade now and experience the power of personalized aesthetics.</h2>
+            <a href="Bloxshade.zip" download="Bloxshade.zip" class="btn-download-wrapper">
+                <button class="btn-1" type="button">Download Now<span class="material-icons-round">download</span></button>
+            </a>
+        </section>
+
+        <footer>
+            <div class="container">
+                <ul>
+                    <li><a href="https://discord.gg/kUQa896Wdj" target="_blank">Discord</a></li>
+                    <li><a href="https://www.youtube.com/c/Extravi" target="_blank">YouTube</a></li>
+                </ul>
+                <p>&copy; 2026 Extravi. All rights reserved.</p>
+            </div>
+        </footer>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js"></script>
+</body>
+</html>
